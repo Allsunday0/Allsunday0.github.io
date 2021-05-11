@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>测试</title>
+	<style>
+		button {
+			width: 200px;
+			height: 30px;
+		}
+
+		.remark {
+			font-size: 75%;
+			color: green
+		}
+
+		.column {
+			width: 200px;
+			height: 300px;
+		}
+
+		#cic, #ngw {
+			display: inline-block;
+		}
+	</style>
+</head>
+
+<body>
+	<div>
+		<h3>工作内网环境常用地址</h3>
+		<a href="https://synergy.hundsun.com/wui/main.jsp" target="_blank" style="font-size:90%">协同</a>&emsp;
+		<a href="http://cloud.blade.hundsun.com/index.htm" target="_blank" style="font-size:90%">测试云平台</a>&emsp;
+		<a href="http://hep.hundsun.com/login.htm;JSESSIONID=ec270645-14c7-47d4-b86a-da8c94e6b46e" target="_blank"
+			style="font-size:90%">资源管控平台</a>&emsp;
+		<a href="https://se.hundsun.com/secure/Dashboard.jspa;jsessionid=CB59EAA9C257FB2F1EA813F3D6754CA2;jsessionid=86FF4421D78E111FE71A6E43293FC838"
+			target="_blank" style="font-size:90%">jira</a>&emsp;
+		<a href="https://scm.hundsun.com/pkgManage/#p" target="_blank" style="font-size:90%">pkg</a>&emsp;
+		<a href="http://dev.hundsun.com/frame/pms/workbench" target="_blank" style="font-size:90%">效能平台</a>&emsp;
+		<a href="http://rdc.hundsun.com/product/download/" target="_blank" style="font-size:90%">研发中心产品下载</a>&emsp;
+		<a href="http://hui.hundsun.com/#/" target="_blank" style="font-size:90%">hui</a>&emsp;
+
+	</div>
+	<div>
+		<HR>
+		<h3>测试环境-客户中心、通知中心</h3>
+		<div id="cic" class="column">
+			<h4>客户中心</h4>
+			<h5>XONE-102</h5>
+			<a href="http://10.20.46.102:8081/acm/app.htm#/dashboard/application/list" target="_blank"
+				style="font-size:90%">客户中心-102-SEE平台</a>
+			<p class="remark">账号密码：admin/1</p>
+			<a href="http://10.20.46.102:8088/xone-ucp/#/login" target="_blank" style="font-size:90%">客户中心-102-前端</a>
+			<p class="remark">账号密码：admin/admin@123</p>
+			<p>&emsp;</p>
+			<h5>客户中心UF3.0环境</h5>
+			<a href="http://10.20.18.209:8081/acm/app.htm#/dashboard/application/list" target="_blank"
+				style="font-size:90%">UF3.0-SEE平台</a>
+			<p class="remark">账号密码：wuxq21571/hs@201001</p>
+			<a href="http://10.20.18.201:8088/uf3-web/#/mainIndex" target="_blank" style="font-size:90%">UF3.0-前端</a>
+			<p class="remark">账号密码：admin/admin@123</p>
+			<p>&emsp;</p>
+		</div>
+
+		<div id="ngw" class="column">
+			<h4>通知中心</h4>
+			<h5>XONE-225</h5>
+			<a href="http://10.20.28.225:8081/acm/app.htm#/dashboard/application/list" target="_blank"
+				style="font-size:90%">通知中心-225-SEE平台</a>
+			<p class="remark">账号密码：admin/1</p>
+			<a href="http://10.20.28.225:8088/xone-ucp/#/login" target="_blank" style="font-size:90%">通知中心-225-前端</a>
+			<p class="remark">账号密码：admin/admin@123</p>
+			<a href="http://10.20.28.225:8088/xone-ucp-frame/#/login" target="_blank"
+				style="font-size:90%">通知中心-225-前端2.0</a>
+			<p class="remark">账号密码：admin/admin@123</p>
+			<h5>通知中心UF3.0环境</h5>
+			<a href="http://10.20.18.209:8081/acm/ " target="_blank" style="font-size:90%">UF3.0-SEE平台</a>
+			<p class="remark">账号密码：wuxq21571/hs@201001</p>
+			<a href="http://10.20.18.201:8088/uf3-web/#/login" target="_blank" style="font-size:90%">UF3.0-前端</a>
+			<p class="remark">账号密码：Jamie/admin@123</p>
+		</div>
+	</div>
+	<div>
+		<HR>
+		<h5 onclick='div_show("div1")'>比较两个数组</h5>
+		<div id="div1" style='display: none;'>
+			<p class="remark">说明：请输入两个待比较的数组（字符串，按逗号分隔）</p>
+			<textarea id="inputarr1" name="Text1" cols="80" rows="5"></textarea>
+			<textarea id="inputarr2" name="Text1" cols="80" rows="5"></textarea>
+			<!--input id = "inputarr1" type = "text" ></input>
+		<input id = "inputarr2" type = "text" ></input-->
+			<p></p>
+			<button onclick="compareArray()">比较</button>
+			<button onclick="reset_input()">重置</button>
+			<p id="result2">结果：</p>
+		</div>
+		<HR>
+		<h5 onclick='div_show("div2")'>加减乘除</h5>
+		<div id="div2" style='display: none;'>
+			<p class="remark">说明：请在输入框中按照 “x/y” 或 “x+y” 或 “x-y” 或 “x*y”的格式输入，输入框内容变化自动出结果。目前只支持两个数值的计算。</p>
+			<input id="inputtoratio" type="text" onchange="calculate()"></input>
+			<p id="colResult">计算结果：</p>
+		</div>
+	</div>
+	<div>
+		<HR>
+		<h3>常用工具地址</h3>
+		<a href="https://www.json.cn/" target="_blank" style="font-size:90%">json格式解析</a>&emsp;
+		<a href="http://www.esjson.com/jsontoexcel.html/" target="_blank" style="font-size:90%">json转excel</a>
+	</div>
+
+
+	<script>
+		function calculate() {
+			var str = document.getElementById("inputtoratio").value
+			var result = ""
+			if (str.trim() != '') {
+				if (str.indexOf("/") != -1) {
+					var strArray = str.split("/");
+					// console.log(strArray)
+					if (strArray.length == 2) {
+						var ratio = Number(strArray[0]) / Number(strArray[1]) * 100;
+						result = "计算结果：" + ratio + "%"
+					}
+				} else if (str.indexOf("*") != -1) {
+					var strArray = str.split("*");
+					if (strArray.length == 2) {
+						var mul = Number(strArray[0]) * Number(strArray[1]);
+						result = "计算结果：" + mul
+					}
+				} else if (str.indexOf("+") != -1) {
+					var strArray = str.split("+");
+					if (strArray.length == 2) {
+						var sum = Number(strArray[0]) + Number(strArray[1]);
+						result = "计算结果：" + sum
+					}
+				} else if (str.indexOf("-") != -1) {
+					var strArray = str.split("-");
+					if (strArray.length == 2) {
+						var dif = Number(strArray[0]) - Number(strArray[1]);
+						result = "计算结果：" + dif
+					}
+				} else {
+					result = "输入格式错误"
+				}
+			} else {
+				result = "计算结果：";
+			}
+
+			document.getElementById("colResult").innerHTML = result;
+		}
+
+		function compareArray() {
+			var str1 = document.getElementById("inputarr1").value.replace(/\r\n/g, ',').replace(/\r/g, ',').replace(/\n/g,
+				',').replace(/,{2,}/g, ',')
+			var arr1 = str1.toLowerCase().split(',')
+			console.log(arr1)
+			var str2 = document.getElementById("inputarr2").value.replace(/\r\n/g, ',').replace(/\r/g, ',').replace(/\n/g,
+				',').replace(/,{2,}/g, ',')
+			var arr2 = str2.toLowerCase().split(',')
+			console.log(arr2)
+			if (arr1.sort().toString() == arr2.sort().toString()) {
+				document.getElementById("result2").innerHTML = "结果：相等";
+			} else {
+				// document.getElementById("result2").innerHTML = "不相等";
+				var diff = []
+				for (var i = 0; i < arr2.length; i++) {
+					if (arr1.indexOf(arr2[i]) === -1) {
+						diff.push(arr2[i])
+					}
+					var result = document.getElementById("result2")
+					result.innerHTML = "结果：不相等，数组1中没有：" + diff;
+					result.style.color = "red";
+				}
+			}
+		}
+
+		function reset_input() {
+			document.getElementById("inputarr1").value = "";
+			document.getElementById("inputarr2").value = "";
+		}
+
+		/* 显示代码块 */
+		function div_show(div_id) {
+			var vDiv = document.getElementById(div_id)
+			vDiv.style.display = (vDiv.style.display == 'none') ? 'block' : 'none';
+		}
+	</script>
+
+</body>
+
+</html>
