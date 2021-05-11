@@ -18,14 +18,14 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: 文森的博客
-author: 文森
-email: wenyidao@126.com
+title: Allsunday的博客
+author: Allsunday
+email: yueyaer_L@163.com
 description: >- # this means to ignore newlines until "baseurl:"
-  认真工作，快乐生活！
+  Keep going！
 # baseurl: "/" # the subpath of your site, e.g. /blog
 # url: "http://ejjoo.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-github_username: guojianbin1991
+github_username: Allsunday
 highlighter: rouge
 svg:
   optimize: true
@@ -40,7 +40,7 @@ tag_dir: tag/
 
 
 social:
-  github: vincent-0112.github.io
+  github: https://allsunday0.github.io/
 
 # Exclude from processing.
 # The following items will not be processed, by default.
